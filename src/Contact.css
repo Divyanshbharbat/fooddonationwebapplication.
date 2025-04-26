@@ -1,0 +1,9 @@
+textarea:focus,
+input:focus {
+  border-color: #38ef7d;
+  box-shadow: 0 0 0 0.2rem rgba(56, 239, 125, 0.25);
+}
+
+form label {
+  font-weight: 600;
+}
