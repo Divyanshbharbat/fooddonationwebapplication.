@@ -147,21 +147,26 @@ router.post("/ppp", jwtMiddleware, async (req, res) => {
 
     // ✅ Compose email
     const mailOptions = {
-      from: `"Divyansh Food Dnation website" <${process.env.VITE_EMAIL_USER}>`,
+      from: `"Divyansh Food Donation Platform" <${process.env.VITE_EMAIL_USER}>`,
       to: to || 'bharbatdivyansh1@gmail.com',
-      subject: "🙏 Thank You for Your Donation!",
+      subject: "Heartfelt Thanks for Your Generous Donation!",
       html: `
-        <h2>Thank you, ${updatedUser.username}!</h2>
-        <p>We truly appreciate your generosity.</p>
-        <ul>
-          <li><strong>Product:</strong> ${product}</li>
-          <li><strong>Quantity:</strong> ${quantity}</li>
-          <li><strong>Address:</strong> ${address}</li>
-          <li><strong>Time:</strong> ${time}</li>
-        </ul>
-        <p>We'll reach out if we need any further info. You're amazing! 🌟</p>
+        <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+          <h2 style="color: #4CAF50;">Thank You, ${updatedUser.username}! 🌟</h2>
+          <p>We are deeply grateful for your kind-hearted donation. Your support helps us bring hope and nourishment to many in need.</p>
+          <h3 style="margin-top: 20px;">📝 Donation Details:</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li><strong>🥘 Product:</strong> ${product}</li>
+            <li><strong>📦 Quantity:</strong> ${quantity}</li>
+            <li><strong>📍 Address:</strong> ${address}</li>
+            <li><strong>⏰ Time of Donation:</strong> ${time}</li>
+          </ul>
+          <p style="margin-top: 20px;">Our team will contact you if any additional information is needed. Thank you for making a real difference! 💚</p>
+          <p>With gratitude,<br><strong>Divyansh Food Donation Team</strong></p>
+        </div>
       `
     };
+    
 
     // ✅ Send email
     try {
