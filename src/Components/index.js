@@ -23,7 +23,7 @@ import { Router } from 'express';
 //   credentials: true,
 // };
 const corsOptions = {
-  origin: 'https://divyanshfoodsystem',
+  origin: 'https://divyanshfoodsystem.netlify.app',
   credentials: true,
 };
 // const corsOptions = {
