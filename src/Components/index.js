@@ -23,7 +23,7 @@ import { Router } from 'express';
 //   credentials: true,
 // };
 const corsOptions = {
-  origin: 'https://fooddonationwebapplication.vercel.app',
+  origin: 'https://divyanshfoodsystem',
   credentials: true,
 };
 // const corsOptions = {
